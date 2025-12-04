@@ -8,6 +8,8 @@ source ~/.zshrc
 Install `juliaup` by homebrew
 ```sh
 brew install juliaup
+#or
+curl -fsSL https://install.julialang.org | sh
 juliaup add release
 ```
 
