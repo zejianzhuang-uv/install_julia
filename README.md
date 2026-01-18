@@ -19,8 +19,11 @@ juliaup add release
 - Create a folder called `config` under the `~/.julia/`
 - Create a new file call `startup.jl` and fill the below:
 ```julia
+# ENV["JULIA_CONDAPKG_BACKEND"] = "Null"
+ENV["PYTHON"] = "/opt/anaconda3/envs/JuliaPy/bin/python"
 ENV["JULIA_CONDAPKG_BACKEND"] = "Null"
-ENV["JULIA_PYTHONCALL_EXE"] = "/opt/miniconda3/bin/python"
-ENV["JULIA_PYTHONCALL_EXE"] = "@PyCall"  # optional
+# ENV["JULIA_PYTHONCALL_EXE"] = "/opt/anaconda3/envs/JuliaPy/bin/python"
+# ENV["JULIA_PYTHONCALL_EXE"] = "@PyCall"  # optional
+ENV["IJULIA_PYTHONCALL"] = "0"
 ```
 - Install `PyCall` and `PythonCall`
